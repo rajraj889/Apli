@@ -1,0 +1,60 @@
+<html>
+<head>
+	
+	<script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/fusioncharts.js"></script>
+	<script type="text/javascript" src="https://cdn.fusioncharts.com/fusioncharts/latest/themes/fusioncharts.theme.fusion.js"></script>
+    
+    <script type="text/javascript">
+		FusionCharts.ready(function(){
+			var chartObj = new FusionCharts({
+    type: 'radar',
+    renderAt: 'chart-container',
+    width: '600',
+    height: '350',
+    dataFormat: 'json',
+    dataSource: {
+        "chart": {
+            "caption": "CAPTION",
+            "subCaption": "Based on some factors",
+            "numberPreffix": "$",
+            "theme": "fusion",
+            "radarfillcolor": "#ffffff",
+        },
+        "categories": [{
+            "category": [{
+                "label": "SKILL 1"
+            }, {
+                "label": "SKILL 2"
+            }, {
+                "label": "SKILL 3"
+            }, {
+                "label": "SKILL 4"
+            }, {
+                "label": "SKILL 5"
+            }]
+        }],
+        "dataset": [{
+            "seriesname": "SKILLSET",
+            "data": [{
+                "value": "3.5"
+            }, {
+                "value": "4.8"
+            }, {
+                "value": "3.1"
+            }, {
+                "value": "4.0"
+            }, {
+                "value": "3.6"
+            }]
+        }]
+    }
+}
+);
+			chartObj.render();
+		});
+	</script>
+	</head>
+	<body>
+		<div id="chart-container"></div>
+	</body>
+</html>
